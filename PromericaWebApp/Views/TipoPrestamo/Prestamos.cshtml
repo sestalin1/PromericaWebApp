@@ -1,0 +1,69 @@
+﻿@model IEnumerable<PromericaWebApp.Models.Prestamo>
+
+@{
+    ViewBag.Title = "Prestamos";
+}
+
+<h2>Prestamos</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaApertura)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cedula)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreAgencia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tasa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaApertura)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cedula)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreAgencia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tasa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor)
+        </td>
+       
+    </tr>
+}
+
+</table>

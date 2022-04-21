@@ -1,0 +1,38 @@
+﻿@model IEnumerable<PromericaWebApp.Models.TipoPrestamo>
+
+@{
+    ViewBag.Title = "Tipo de Prestamos";
+}
+
+<h2>Tipo de Prestamos</h2>
+
+<p>
+    @Html.ActionLink("Agregar Nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tipoPrestamo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tasa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipoPrestamo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tasa)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new {  id=item.tipoPrestamo}) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.tipoPrestamo })
+        </td>
+    </tr>
+}
+
+</table>

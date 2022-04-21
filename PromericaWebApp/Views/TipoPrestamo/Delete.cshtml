@@ -1,0 +1,40 @@
+﻿@model PromericaWebApp.Models.TipoPrestamo
+
+@{
+    ViewBag.Title = "Eliminar";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro de eliminar este registro?</h3>
+<div>
+    <h4>TipoPrestamo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoPrestamo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipoPrestamo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tasa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tasa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Elimminar" class="btn btn-default" /> |
+            @Html.ActionLink("Volver a la Lista", "Index")
+        </div>
+    }
+</div>
